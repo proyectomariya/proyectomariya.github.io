@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Mariya</title>
+    <link rel="icon" href="img/mariya.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
     <link rel="stylesheet" type="text/css" href="css/vendor/reset.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
@@ -28,6 +29,9 @@
         </div>
         <div class="row">    
             <div id="fuego_processing" class= "col-sm-12 animation" style="width:200px;height:200px;top:75%;bottom:0%;"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 animation text-center" style="width:200px;height:200px;top:95%;bottom=0;"><a href="landing.html"><img style="width:30px;height:15px;"src="img/skip.png"/></a></div>
         </div>
     </div> 
 <script>
@@ -77,7 +81,7 @@ if (annyang) {
             var animData = {
                 wrapper: document.getElementById('fuego_result'),
                 animType: 'svg',
-                loop: true,
+                loop: false,
                 prerender: true,
                 autoplay: true,
                 path: 'json/data_fuego_result.json'
@@ -99,9 +103,9 @@ if (annyang) {
             var anim = bodymovin.loadAnimation(animData);
             bodymovin.setSubframeRendering(false);
 
-            var delay=6100;
+            var delay=5000;
             setTimeout(function() {
-                document.location.href = "#"
+                document.location.href = "landing.html"
             }, delay);
         }
     };
