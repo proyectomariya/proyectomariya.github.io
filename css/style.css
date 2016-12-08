@@ -1,0 +1,46 @@
+body{
+	background-color: #08131E;
+}
+
+.animation_text{
+	height: 105px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.animation_logo{
+	width: 437px;
+	height: 246px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.activate{
+	font-family: 'Amatica SC';
+	font-size: 35px;
+	color: #AFADB3;
+	margin-top: 200px;
+}
+
+.microphone{
+	width: 120px;
+	height: 120px;
+	margin-top: 50px;
+}
+
+img:hover + temporal{
+	display: block;
+}
+
+.animation{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+}

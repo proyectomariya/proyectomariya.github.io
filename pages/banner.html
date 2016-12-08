@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+	<link rel="stylesheet" type="text/css" href="../css/vendor/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+
+    <script src="../js/bodymovin.js"></script>
+    <script src="../js/microfono.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div id="micro_text" class="col-sm-12 animation" style="width:200px;height:200px;top:75%;bottom:0;"></div>
+		</div>
+		<div class="row">
+			<div id="micro_icon" class="col-sm-12 animation" style="width:350px;height:350px;top:65%;bottom:20%;"></div>
+		</div>
+	</div>
+	
+<script>
+    var animData = {
+        wrapper: document.getElementById('micro_text'),
+        animType: 'svg',
+        loop: true,
+        prerender: true,
+        autoplay: true,
+        path: '../json/data_banner_text.json'
+    };
+    var anim = bodymovin.loadAnimation(animData);
+    bodymovin.setSubframeRendering(false);
+</script>
+<script>
+    var animData = {
+        wrapper: document.getElementById('micro_icon'),
+        animType: 'svg',
+        loop: false,
+        prerender: true,
+        autoplay: true,
+        path: '../json/data_banner_icon.json'
+    };
+    var anim = bodymovin.loadAnimation(animData);
+    bodymovin.setSubframeRendering(false);
+</script>
+
+<script type="text/javascript">
+    var delay=6500; 
+    setTimeout(function() {
+    document.location.href = "aire.html"
+}, delay);
+</script>
+</body>
+</html>

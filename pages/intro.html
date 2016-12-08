@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+	<link rel="stylesheet" type="text/css" href="../css/vendor/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+
+    <script src="../js/bodymovin.js"></script>
+</head>
+<body>
+	<div class= "container">
+        <div class= "row">
+            <div id="logo_part1" class="col-sm-3 animation_logo"></div>
+            <div id="logo_part2" class="col-sm-3 animation_logo"></div>
+            <div id="logo_part3" class="col-sm-3 animation_logo"></div>
+            <div id="logo_part4" class="col-sm-3 animation_logo"></div>
+        </div>     
+    </div>
+
+<script>
+    var animData = {
+        wrapper: document.getElementById('logo_part1'),
+        animType: 'svg',
+        loop: false,
+        prerender: true,
+        autoplay: true,
+        path: '../json/data_intro_logo_part1.json'
+    };
+    var anim = bodymovin.loadAnimation(animData);
+    bodymovin.setSubframeRendering(false);
+</script>
+<script>
+    var animData = {
+        wrapper: document.getElementById('logo_part2'),
+        animType: 'svg',
+        loop: false,
+        prerender: true,
+        autoplay: true,
+        path: '../json/data_intro_logo_part2.json'
+    };
+    var anim = bodymovin.loadAnimation(animData);
+    bodymovin.setSubframeRendering(false);
+</script>
+<script>
+    var animData = {
+        wrapper: document.getElementById('logo_part3'),
+        animType: 'svg',
+        loop: false,
+        prerender: true,
+        autoplay: true,
+        path: '../json/data_intro_logo_part3.json'
+    };
+    var anim = bodymovin.loadAnimation(animData);
+    bodymovin.setSubframeRendering(false);
+</script>
+<script>
+    var animData = {
+        wrapper: document.getElementById('logo_part4'),
+        animType: 'svg',
+        loop: false,
+        prerender: true,
+        autoplay: true,
+        path: '../json/data_intro_logo_part4.json'
+    };
+    var anim = bodymovin.loadAnimation(animData);
+    bodymovin.setSubframeRendering(false);
+</script>
+
+<!-- Wait a moment to change page -->
+<script type="text/javascript">
+    var delay=6500;
+    setTimeout(function() {
+    document.location.href = "micro.html"
+}, delay);
+</script>
+
+</body>
+</html>

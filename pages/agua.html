@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="../css/vendor/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+
+    <script src="../js/bodymovin.js"></script>
+    <script src="../js/microfono.js"></script>
+</head>
+<body>
+    <audio src="../audios/water.mp3" loop autoplay></audio>
+
+    <div class= "container">
+        <div class="row">
+            <div id="agua_text" class= "col-sm-12 animation" style="width:200px;height:200px;top:40%;bottom:0;"></div> 
+        </div>
+        <div class="row">
+            <div id="agua_listening" class= "col-sm-12 animation" style="width:200px;height:200px;top:75%;bottom:0;"></div>
+        </div>
+        <div class="row"> 
+            <div id="aire_result" class= "col-sm-12 animation" style="width:380px;height:380px;top:0;bottom:25%;"></div>
+        </div>    
+        <div class="row">
+            <div id="agua_result" class= "col-sm-12 animation" style="width:380px;height:380px;top:0;bottom:25%;"></div> 
+        </div>
+        <div class="row">    
+            <div id="agua_processing" class= "col-sm-12 animation" style="width:200px;height:200px;top:75%;bottom:0%;"></div>
+        </div>
+    </div> 
+
+<script>
+    var animData = {
+        wrapper: document.getElementById('aire_result'),
+        animType: 'svg',
+        loop: true,
+        prerender: true,
+        autoplay: true,
+        path: '../json/data_static_agua.json'
+    };
+    var anim = bodymovin.loadAnimation(animData);
+    bodymovin.setSubframeRendering(false);
+</script>
+
+<script>
+    var animData = {
+        wrapper: document.getElementById('agua_text'),
+        animType: 'svg',
+        loop: false,
+        prerender: true,
+        autoplay: true,
+        path: '../json/data_agua_text.json'
+    };
+    var anim = bodymovin.loadAnimation(animData);
+    bodymovin.setSubframeRendering(false);
+</script>
+
+<script>
+    var animData = {
+        wrapper: document.getElementById('agua_listening'),
+        animType: 'svg',
+        loop: true,
+        prerender: true,
+        autoplay: true,
+        path: '../json/data_listening.json'
+    };
+    var anim = bodymovin.loadAnimation(animData);
+    bodymovin.setSubframeRendering(false);
+</script>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script>
+<script>
+if (annyang) {
+  // Let's define our first command. First the text we expect, and then the function it should call
+    var commands = {
+        'cafe': function() {
+            var animData = {
+                wrapper: document.getElementById('agua_result'),
+                animType: 'svg',
+                loop: false,
+                prerender: true,
+                autoplay: true,
+                path: '../json/data_agua_result.json'
+            };
+            var anim = bodymovin.loadAnimation(animData);
+            bodymovin.setSubframeRendering(false);
+
+            var link = document.getElementById('agua_listening');
+            link.style.display = 'none'; 
+
+            var animData = {
+                wrapper: document.getElementById('agua_processing'),
+                animType: 'svg',
+                loop: false,
+                prerender: true,
+                autoplay: true,
+                path: '../json/data_processing.json'
+            };
+            var anim = bodymovin.loadAnimation(animData);
+            bodymovin.setSubframeRendering(false);
+
+            var delay=6100;
+            setTimeout(function() {
+                document.location.href = "tierra.html"
+            }, delay);
+        }
+    };
+
+    // Add our commands to annyang
+    annyang.addCommands(commands);
+
+    annyang.addCallback('result', function(phrases) {
+        console.log("I think the user said: ", phrases[0]);
+        console.log("But then again, it could be any of the following: ", phrases);
+    });
+
+    // Start listening. You can call this here, or attach this call to an event, button, etc.
+    annyang.start();
+}
+</script>
+</body>
+</html>
