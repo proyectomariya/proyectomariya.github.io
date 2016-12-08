@@ -2,15 +2,16 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <title>Mariya</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-    <link rel="stylesheet" type="text/css" href="../css/vendor/reset.css"/>
-    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/vendor/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
 
-    <script src="../js/bodymovin.js"></script>
-    <script src="../js/microfono.js"></script>
+    <script src="js/bodymovin.js"></script>
+    <script src="js/microfono.js"></script>
 </head>
 <body>
-    <audio src="../audios/fire.mp3" loop autoplay></audio>
+    <audio src="audios/fire.mp3" loop autoplay></audio>
 
     <div class= "container">
         <div class="row">
@@ -36,7 +37,7 @@
         loop: true,
         prerender: true,
         autoplay: true,
-        path: '../json/data_static_fuego.json'
+        path: 'json/data_static_fuego.json'
     };
     var anim = bodymovin.loadAnimation(animData);
     bodymovin.setSubframeRendering(false);
@@ -48,7 +49,7 @@
         loop: false,
         prerender: true,
         autoplay: true,
-        path: '../json/data_fuego_text.json'
+        path: 'json/data_fuego_text.json'
     };
     var anim = bodymovin.loadAnimation(animData);
     bodymovin.setSubframeRendering(false);
@@ -61,7 +62,7 @@
         loop: true,
         prerender: true,
         autoplay: true,
-        path: '../json/data_listening.json'
+        path: 'json/data_listening.json'
     };
     var anim = bodymovin.loadAnimation(animData);
     bodymovin.setSubframeRendering(false);
@@ -79,7 +80,7 @@ if (annyang) {
                 loop: true,
                 prerender: true,
                 autoplay: true,
-                path: '../json/data_fuego_result.json'
+                path: 'json/data_fuego_result.json'
             };
             var anim = bodymovin.loadAnimation(animData);
             bodymovin.setSubframeRendering(false);
@@ -93,7 +94,7 @@ if (annyang) {
                 loop: false,
                 prerender: true,
                 autoplay: true,
-                path: '../json/data_processing.json'
+                path: 'json/data_processing.json'
             };
             var anim = bodymovin.loadAnimation(animData);
             bodymovin.setSubframeRendering(false);

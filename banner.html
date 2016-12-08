@@ -2,12 +2,13 @@
 <html>
 <head>
 	<meta charset="utf-8">
+    <title>Mariya</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-	<link rel="stylesheet" type="text/css" href="../css/vendor/reset.css"/>
-    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="css/vendor/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
 
-    <script src="../js/bodymovin.js"></script>
-    <script src="../js/microfono.js"></script>
+    <script src="js/bodymovin.js"></script>
+    <script src="js/microfono.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -26,7 +27,7 @@
         loop: true,
         prerender: true,
         autoplay: true,
-        path: '../json/data_banner_text.json'
+        path: 'json/data_banner_text.json'
     };
     var anim = bodymovin.loadAnimation(animData);
     bodymovin.setSubframeRendering(false);
@@ -38,7 +39,7 @@
         loop: false,
         prerender: true,
         autoplay: true,
-        path: '../json/data_banner_icon.json'
+        path: 'json/data_banner_icon.json'
     };
     var anim = bodymovin.loadAnimation(animData);
     bodymovin.setSubframeRendering(false);
