@@ -18,11 +18,14 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,900" rel="stylesheet">
 
-	<script src="js/bodymovin.js" type="text/javascript"></script>
+	<script src="js/bodymovin.js" type="text/javascript"></script> 
+	<script src="js/bodymovin_landing.js" type="text/javascript" ></script>
+
 	<script src="js/flickity.pkgd.js"></script>
 	<script src="js/jquery.js"></script>
 	<script src="js/wow.min.js"></script>
 	<script>new WOW().init();</script>
+
 </head>
 <body class="animated fadeIn" style="-webkit-animation-duration:7s;animation-duration:7s;">
 	<header>
@@ -40,20 +43,24 @@
 			<a href="#contacto"><li>CONTACTO</li></a>
 		</ul>
 	</nav> 
-	
 	<div class= "container-fluid animated fadeIn">
         <div class= "row">
-        	<div class= "col-12 logo" id="animation_logo"></div>
+        	<a href="#racional" onClick="animateRacional();" ><div class= "col-12 logo" id="animation_logo"></div></a>
         </div>
-    </div>
+    </div> 
+    <script>
+    function animateRacional(){
+    	$('#row_racional').addClass('slideInDown')
+    };
+    </script>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-12">
 				<section id="inicio"></section>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-12">
+		<div class="row" id="row_racional">
+			<div class="col-12" >
 				<section id="racional" class="centrar">
 					<div class="wow fadeInLeft">
 						<h1>NO SOMOS HUICHOLES</h1>
